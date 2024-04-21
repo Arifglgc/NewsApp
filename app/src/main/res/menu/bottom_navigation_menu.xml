@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="Main"
+    android:icon="@drawable/main_asset"
+    android:id="@+id/homeFragment"
+
+    />
+
+<item android:title="Explore"
+    android:icon="@drawable/va_explore"
+    android:id="@+id/searchFragment"
+
+
+    />
+
+<item android:title="Bookmark"
+    android:icon="@drawable/va_bookmark"
+    android:id="@+id/bookmarkFragment"
+
+    />
+
+<item android:title="Profile"
+    android:icon="@drawable/va_person"
+    android:id="@+id/profileFragment"
+
+    />
+</menu>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvBeginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Let's start with the news!"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="200dp"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:layout_constraintTop_toBottomOf="@id/tvBeginText"
+        app:layout_constraintBottom_toTopOf="@id/etEmail"
+            android:text="Don't have an account? Register"
+        android:textSize="12sp"
+        android:layout_marginTop="100dp"
+
+
+        >
+
+    </TextView>
+
+    <androidx.appcompat.widget.AppCompatEditText
+
+        android:layout_marginTop="400dp"
+        android:id="@+id/etEmail"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:hint="Email"
+        android:singleLine="true"
+        >
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etPassword"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:hint="Password"
+        android:singleLine="true"
+        >
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        android:text="Forgot Password"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp"
+        >
+
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_login_button"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:text="LOGIN"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvForgotPassword"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

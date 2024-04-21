@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:background="@color/white"
+        >
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:contentDescription="Geri Git"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintBottom_toTopOf="@+id/tvNewsTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/bookmarkButtonButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Geri Git"
+            android:scaleType="fitCenter"
+            android:src="@drawable/va_bookmark"
+            app:layout_constraintBottom_toTopOf="@+id/tvNewsTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNewsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Title"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.462"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNewsAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Author"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            app:layout_constraintHorizontal_bias="0.462"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNewsTitle" />
+        <TextView
+            android:id="@+id/tvNewsDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Date"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            app:layout_constraintHorizontal_bias="0.462"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNewsTitle" />
+
+
+        <ImageView
+            android:id="@+id/ivNews"
+            android:layout_width="378dp"
+            android:layout_height="214dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/newi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNewsAuthor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivNews"
+            android:layout_marginTop="20dp"
+            android:text="lorem impum bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla"
+            >
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
