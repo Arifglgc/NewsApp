@@ -11,13 +11,14 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.golgeciarif.newsapp.util.NewsCategories
 import com.golgeciarif.newsapp.adapter.LatestNewsAdapter
 import com.golgeciarif.newsapp.adapter.NewsAdapter
 import com.golgeciarif.newsapp.adapter.NewsCategoryAdapter
 import com.golgeciarif.newsapp.databinding.FragmentHomeBinding
 import com.golgeciarif.newsapp.newsPojo.Article
+import com.golgeciarif.newsapp.util.NewsCategories
 import com.golgeciarif.newsapp.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -36,7 +37,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         latestNewsAdapter= LatestNewsAdapter()
         categoryAdapter= NewsCategoryAdapter(0)
@@ -68,7 +69,9 @@ class HomeFragment : Fragment() {
 
     private fun onNewsListClick() {
         latestNewsAdapter.onItemClick = { new ->
+            val action = HomeFragmentDirections.actionHomeFragment2ToNewsDetailFragment(new)
 
+            findNavController().navigate(action)
 
         }
     }

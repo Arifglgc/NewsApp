@@ -15,5 +15,9 @@
     <fragment
         android:id="@+id/newsDetailFragment"
         android:name="com.golgeciarif.newsapp.fragments.NewsDetailFragment"
-        android:label="NewsDetailFragment" />
+        android:label="NewsDetailFragment" >
+        <argument
+            android:name="new"
+            app:argType="com.golgeciarif.newsapp.newsPojo.Article" />
+    </fragment>
 </navigation>

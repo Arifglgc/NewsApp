@@ -8,10 +8,11 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-parcelize")
-
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("com.google.gms.google-services")
+    id ("androidx.navigation.safeargs.kotlin") // this line, not the whole block
+
 
 }
 
