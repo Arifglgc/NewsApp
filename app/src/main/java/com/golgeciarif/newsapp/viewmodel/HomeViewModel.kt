@@ -38,7 +38,7 @@ private val newsAPIService: NewsAPIService
                 Log.d(TAG, "TEST")
 
                 if (response.isSuccessful) {
-                    val newsList = response.body()?.articles
+                    val newsList = filterBrokenNews(response.body()?.articles)
                     if (newsList != null) {
                         Log.d(TAG, newsList.size.toString())
                         Log.d(TAG, "test")
@@ -64,7 +64,7 @@ private val newsAPIService: NewsAPIService
 
                 if (response.isSuccessful) {
                     _newsByCategory.emit(emptyList())
-                    val newsList = response.body()?.articles
+                    val newsList = filterBrokenNews(response.body()?.articles)
                     if (newsList != null) {
                         Log.d(TAG, newsList.size.toString()+newsList[5].title)
                         Log.d(TAG, "test")
@@ -73,13 +73,27 @@ private val newsAPIService: NewsAPIService
 
                 } else {
                     Log.d(TAG, " is null")
-
                 }
             } catch (e: Exception) {
                 Log.d(TAG, e.message.toString())
-
             }
         }
+    }
+
+    private fun filterBrokenNews(articleList: List<Article>?) : List<Article>?
+    {
+        val  filteredArticles= mutableListOf<Article>()
+        Log.d(TAG, "Filtered Articles: ${articleList?.size}")
+
+        articleList?.forEach{ article->
+            if(!article.urlToImage.isNullOrBlank() && !article.description.isNullOrBlank() && article.title != "[Removed]") {
+                filteredArticles.add(article)
+                Log.d(TAG, "Filtered Articles: ${article.title + article.urlToImage}")
+            }
+        }
+        Log.d(TAG, "Filtered Articles: ${filteredArticles.size}")
+
+        return filteredArticles
     }
 
     }

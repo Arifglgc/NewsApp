@@ -79,7 +79,9 @@ class HomeFragment : Fragment() {
     private fun onLatestNewClick() {
         newsAdapter.onItemClick ={ new->
 
+            val action = HomeFragmentDirections.actionHomeFragment2ToNewsDetailFragment(new)
 
+            findNavController().navigate(action)
         }
     }
 
