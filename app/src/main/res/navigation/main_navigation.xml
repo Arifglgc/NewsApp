@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
     app:startDestination="@id/homeFragment2">
 
     <fragment
         android:id="@+id/homeFragment2"
         android:name="com.golgeciarif.newsapp.fragments.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment2_to_newsDetailFragment"
             app:destination="@id/newsDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_exploreFragment"
+            app:destination="@id/exploreFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_self"
+            app:destination="@id/homeFragment2" />
     </fragment>
     <fragment
         android:id="@+id/newsDetailFragment"
@@ -19,5 +27,16 @@
         <argument
             android:name="new"
             app:argType="com.golgeciarif.newsapp.newsPojo.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.golgeciarif.newsapp.fragments.ExploreFragment"
+        android:label="ExploreFragment" >
+        <action
+            android:id="@+id/action_exploreFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_exploreFragment_self"
+            app:destination="@id/exploreFragment" />
     </fragment>
 </navigation>

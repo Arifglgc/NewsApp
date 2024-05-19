@@ -60,6 +60,7 @@ class HomeFragment : Fragment() {
         fetchCategoryList()
         onLocationClick()
 
+
         onLatestNewClick()
         onNewsListClick()
         observerLatestList()

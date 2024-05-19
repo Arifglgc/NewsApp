@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <item android:title="Main"
     android:icon="@drawable/main_asset"
-    android:id="@+id/homeFragment"
+    android:id="@+id/homeFragment2"
 
     />
 
 <item android:title="Explore"
     android:icon="@drawable/va_explore"
-    android:id="@+id/searchFragment"
+    android:id="@+id/exploreFragment"
 
 
     />
